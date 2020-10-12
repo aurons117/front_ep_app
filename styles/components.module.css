@@ -1,0 +1,32 @@
+.nav {
+    background-color: #333353;
+    width: 100vw;
+    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav span {
+    border: 1px solid #00cccc;
+    color: #333353;
+    background-color: #00cccc;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav span:hover {
+    background-color: #2EE6E2;
+}
+
+.nav>img {
+    width: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}

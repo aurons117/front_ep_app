@@ -1,0 +1,34 @@
+[
+    {
+        "idProduct": "001",
+        "name": "Safety Switches",
+        "atributos": [
+            {
+                "idAtributo": "001",
+                "clave": "Tensión",
+                "valor": "220V"
+            },
+            {
+                "idAtributo": "002",
+                "clave": "Corriente",
+                "valor": "60-180A"
+            }
+        ]
+    },
+    {
+        "idProduct": "002",
+        "name": "MCCB 3VA",
+        "atributos": [
+            {
+                "idAtributo": "001",
+                "clave": "ETU",
+                "valor": "300, 500, 800"
+            },
+            {
+                "idAtributo": "002",
+                "clave": "Protección",
+                "valor": "LSI"
+            }
+        ]
+    }
+]

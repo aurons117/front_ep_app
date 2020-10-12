@@ -1,65 +1,91 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import axios from 'axios';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
-export default function Home() {
+export default function Home({ categories }) {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Portafolio de productos EP</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles.nav}>
+        <img src="/logo.png" alt="Logo Siemens" />
+      </div>
+      <div className={styles.container}>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <main className={styles.main}>
+          <header className={styles.header}>
+            <h1>Portafolio de productos EP</h1>
+            <h2>Categorías</h2>
+          </header>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          {
+            categories?.map((category, id) => (
+              <div key={id} className={styles.category_container}>
+                <h3>{category.name}</h3>
+                <div className={styles.category_description}>
+                  <img src={`${category.category_image.url}`} alt='Imagen de categoría' className={styles.categories_images} />
+                  <div className={styles.category_links}>
+                    {
+                      category.subcategories.map((subcategory, id) => (
+                        <Link href='/subcategories/[id]' as={`/subcategories/${subcategory.subcategory_id}`} key={id}>
+                          <a>{subcategory.name}</a>
+                        </Link>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
+            ))
+          }
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        </main>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <footer className={styles.footer}>
+          <p>Footer de la aplicación</p>
+        </footer>
+      </div>
+    </>
+  );
+}
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+// export async function getStaticProps() {
+//   const { data } = await axios.get(`http://18.191.231.159:1337/categories/`);
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+//   const categories = data.map(category => {
+//     return {
+//       name: category.name,
+//       id: category.category_id,
+//       category_image: category.category_image,
+//       subcategories: category.subcategories,
+//     };
+//   });
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+//   return {
+//     props: {
+//       categories
+//     }
+//   }
+// }
+
+// This gets called on every request
+export async function getServerSideProps() {
+  const { data } = await axios.get(`http://13.58.149.30:1337/categories/`);
+
+  const categories = data.map(category => {
+    return {
+      name: category.name,
+      id: category.category_id,
+      category_image: category.category_image,
+      subcategories: category.subcategories,
+    };
+  });
+
+  return {
+    props: {
+      categories
+    }
+  }
 }
