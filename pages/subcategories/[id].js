@@ -2,7 +2,7 @@ import axios from 'axios';
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from '../../components/navbar';
-import styles from '../../styles/subcategories.module.css';
+import styles from '../../styles/subcategories.module.scss';
 
 export default function Products({ data }) {
 

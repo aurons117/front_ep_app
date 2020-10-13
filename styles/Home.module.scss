@@ -1,0 +1,98 @@
+@import "./colors-sizes";
+
+.home_container {
+  background-image: url("../public/home_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  // position: relative;
+}
+
+.home_overlay {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+  background-color: rgba($color: $deep_blue, $alpha: 0.7);
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+
+  div {
+    * {
+      margin-left: 1.5rem;
+    }
+  }
+
+  img {
+    max-height: 1.5rem;
+  }
+}
+
+.main {
+  height: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+
+  h1 {
+    border-left: 0.4rem solid $bold-blue;
+    padding-left: 1rem;
+  }
+
+  span {
+    color: $bold-blue;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 0.7rem;
+    color: $bold-blue;
+    padding-left: 2rem;
+    padding-right: 1.9rem;
+  }
+
+  span {
+    height: 2rem;
+    border-right: 1px solid $bold-blue;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 1.3rem;
+    fill: $bold-blue;
+  }
+}
+
+@media (max-width: $phone_breakpoint) {
+}

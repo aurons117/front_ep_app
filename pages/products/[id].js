@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Navbar from '../../components/navbar';
-import styles from '../../styles/products.module.css';
+import styles from '../../styles/products.module.scss';
 
 export default function Products({ data }) {
     const router = useRouter();
