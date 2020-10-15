@@ -95,7 +95,7 @@ export default function Products({ data }) {
 // This gets called on every request
 export async function getServerSideProps({ params }) {
     // Se obtienen todos los productos, se filtra el que coincide con el param enviado
-    const products = await axios.get(`http://13.58.149.30:1337/products/`);
+    const products = await axios.get(`http://localhost:1337/products/`);
     const data = products.data.filter(product => {
         return params.id === product.product_id;
     });

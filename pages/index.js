@@ -72,7 +72,7 @@ export default function Home({ categories }) {
 
 // This gets called on every request
 export async function getServerSideProps() {
-  const { data } = await axios.get(`http://13.58.149.30:1337/categories/`);
+  const { data } = await axios.get(`http://localhost:1337/categories/`);
 
   const categories = data.map(category => {
     return {

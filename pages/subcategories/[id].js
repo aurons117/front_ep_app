@@ -79,7 +79,7 @@ export default function Products({ data }) {
 // This gets called on every request
 export async function getServerSideProps({ params }) {
     // Se obtienen todos los productos, se filtra el que coincide con el param enviado
-    const subcategories = await axios.get(`http://13.58.149.30:1337/subcategories/`);
+    const subcategories = await axios.get(`http://localhost:1337/subcategories/`);
     const data = subcategories.data.filter(subcategory => {
         return params.id === subcategory.subcategory_id;
     });
