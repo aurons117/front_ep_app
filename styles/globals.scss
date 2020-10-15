@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'siemens sans';
   src: local("../fonts/SiemensSans_Prof_Roman.ttf");
-  // [font-weight: <peso>];
+  font-weight: 400;
   // [font-style: <estilo>];
 }
 
@@ -15,9 +15,9 @@ body {
   background-color: $deep_blue;
   font-size: 14px;
   font-family: 'siemens sans';
-
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  color: white;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
 
 * {
   box-sizing: border-box;
-  color: white;
+  // color: white;
 }
 
 button {

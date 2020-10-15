@@ -21,6 +21,9 @@
     height: 100vh;
     width: 60%;
     background-color: rgba($color: $deep_blue, $alpha: 0.8);
+
+    display: flex;
+    flex-direction: column;
 }
 
 .aside {
@@ -36,7 +39,7 @@
         height: 50%;
         // background-color: yellow;
     }
-    
+
     .aside_image {
         width: 100%;
         height: 50%;
@@ -54,15 +57,13 @@
     }
 }
 
-
-
-.nav {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
-    padding: 2rem;
+    padding: 2rem 2rem 0rem 2rem;
 
     img {
         max-height: 1rem;
@@ -72,16 +73,100 @@
 .main {
     height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 
-    justify-content: center;
-    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
-.content {
-    // height: 100vh;
-    // width: 10vw;
-    // background-color: red;
+.b_contain {
+    margin-left: 2rem;
+}
+
+.application_products,
+.types_products {
+    input {
+        color: $bold-blue;
+        background-color: transparent;
+        border: 1px solid $bold-blue;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+}
+
+.types_products {
+    width: 80%;
 }
 
 @media (max-width: $phone_breakpoint) {
+}
+
+
+// Checkbox
+
+.b_contain *,
+.b_contain *::before,
+.b_contain *::after {
+    box-sizing: content-box !important;
+}
+
+.b_contain input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.b_contain span {
+    line-height: 1.54;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.b_contain {
+    display: table;
+    position: relative;
+    padding-left: 1.8rem;
+    cursor: pointer;
+    margin-bottom: 0.63rem;
+}
+
+.b_contain input[type="checkbox"] ~ .b_input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.0rem;
+    width: 1.0rem;
+    background: transparent;
+    transition: background 250ms;
+    border: 2px solid $bold-blue;
+    border-radius: 1.979rem;
+}
+
+.b_contain input[type="checkbox"] ~ .b_input::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0.45rem;
+    top: 0.18rem;
+    width: 0.25rem;
+    height: 0.6rem;
+    border: solid $bold-blue;
+    border-width: 0 2px 2px 0;
+    // transition: background 250ms;
+    // transform: rotate(45deg);
+}
+
+.b_contain input:disabled ~ .b_input::after {
+    border-color: $bold-blue;
+}
+
+.b_contain input:checked ~ .b_input::after {
+    display: block;
+}
+
+.b_contain input:checked ~ .b_input {
+    background: $bold-blue;
+    // border-color: rgba(0, 130, 243, 1);
 }

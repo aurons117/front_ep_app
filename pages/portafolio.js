@@ -18,17 +18,51 @@ export default function Home() {
 
           <div className={styles.content_lay}>
 
-            <nav className={styles.nav}>
+            <header className={styles.header}>
               <Link href="/">
                 <img src="/logo.png" alt="Logo Siemens" />
               </Link>
               {/* <input placeholder="Búsqueda" /> */}
-            </nav>
+            </header>
 
             <main className={styles.main}>
-              <div className={styles.content}>
+              <section className={styles.normative}>
+                <h1>Normativa</h1>
+                <form id="formClassification">
+                  <label htmlFor="normative_IEC" className={styles.b_contain}>
+                    <span>IEC</span>
+                    <input type="checkbox" id="normative_IEC" name="normative_IEC" value="iec" />
+                    <div className={styles.b_input}></div>
+                  </label>
+                  <label htmlFor="normative_UL" className={styles.b_contain}>
+                    <span>UL</span>
+                    <input type="checkbox" id="normative_UL" name="normative_UL" value="ul" />
+                    <div className={styles.b_input}></div>
+                  </label>
+                  <label htmlFor="normative_NOM" className={styles.b_contain}>
+                    <span>NOM</span>
+                    <input type="checkbox" id="normative_NOM" name="normative_NOM" value="nom" />
+                    <div className={styles.b_input}></div>
+                  </label>
+                </form>
+              </section>
 
-              </div>
+              <section className={styles.application_products}>
+                <h1>Área de aplicación</h1>
+                <input type="submit" id="option1" name="option1" form="formClassification" value="option" />
+                <input type="submit" id="option2" name="option2" form="formClassification" value="option" />
+                <input type="submit" id="option3" name="option3" form="formClassification" value="option" />
+                <input type="submit" id="option4" name="option4" form="formClassification" value="option" />
+                <input type="submit" id="option12" name="option12" form="formClassification" value="option" />
+              </section>
+
+              <section className={styles.types_products}>
+                <h1>Tipo de producto</h1>
+                <input type="submit" id="option5" name="option5" form="formClassification" value="option" />
+                <input type="submit" id="option6" name="option6" form="formClassification" value="option" />
+                <input type="submit" id="option7" name="option7" form="formClassification" value="option" />
+                <input type="submit" id="option8" name="option8" form="formClassification" value="option" />
+              </section>
             </main>
 
           </div>
