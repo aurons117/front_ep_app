@@ -1,5 +1,6 @@
 import React from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import styles from '../styles/products.module.scss';
 
 export default function Product_image() {
     return (
@@ -10,15 +11,12 @@ export default function Product_image() {
         >
             {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
                 <React.Fragment>
-                    {/* <div className="tools">
+                    <div className={`tools ${styles.img_controls}`}>
                         <button onClick={zoomIn}>+</button>
                         <button onClick={zoomOut}>-</button>
-                        <button onClick={resetTransform}>x</button>
-                    </div> */}
-                    <span></span>
+                    </div>
                     <TransformComponent>
                         <img src="/safety.png" alt="test" />
-                        <div>Example text</div>
                     </TransformComponent>
                 </React.Fragment>
             )}

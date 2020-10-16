@@ -17,10 +17,12 @@ export default function Products() {
       <div className={styles.display}>
         <header className={styles.header}>
           <h1>Especificaciones de producto</h1>
-          <div>
-            {/* <img src="/safety.png" alt="Imágen del producto" /> */}
+          <div className={styles.product_image}>
             <Product_image />
           </div>
+          {/* <div>
+            <img src="/safety.png" alt="Imágen del producto" />
+          </div> */}
         </header>
 
         <main>

@@ -1,3 +1,5 @@
+@import "./colors-sizes";
+
 .display {
   width: 100vw;
   min-height: 100vh;
@@ -13,18 +15,44 @@
   font-size: 0.6rem;
   height: 40vh;
   width: 100%;
+}
 
-  div {
-    background-color: white;
+.product_image {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .img_controls {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    // background-color: red;
+    justify-content: center;
+    margin: 0rem 1.5rem 0rem 1.5rem;
+
+    button {
+      background-color: $bold-blue;
+      margin-bottom: 1rem;
+      border-radius: 2rem;
+      border: none;
+      height: 1.7rem;
+      width: 1.7rem;
+      outline: none;
+    }
+  }
+
+  div:nth-child(2) {
     width: 100%;
     height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-  
+
   img {
-    max-height: 30vh;
+    max-height: 35vh;
+    max-width: 100%;
   }
 }
