@@ -16,6 +16,7 @@ export default function Products() {
 
       <div className={styles.display}>
         <header className={styles.header}>
+          <div>Regresar</div>
           <h1>Especificaciones de producto</h1>
           <div className={styles.product_image}>
             <Product_image />
@@ -25,22 +26,22 @@ export default function Products() {
           </div> */}
         </header>
 
-        <main>
-          <article>
+        <main className={styles.main}>
+          <article className={styles.article}>
             <h1>Interruptores de caja moldeada 3VA</h1>
 
-            <section>
+            <section className={styles.downloads}>
               <button>Info</button>
               <button>Descargas</button>
               <button>FAQ</button>
             </section>
 
-            <section>
+            <section className={styles.description}>
               <h2>Características</h2>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam rem sunt libero. Cum officia impedit vitae, atque tenetur vel distinctio.</p>
             </section>
 
-            <section>
+            <section className={styles.specs}>
               <h2>Especificaciones técnicas</h2>
               <ul>
                 <li><span>Protección: </span>LI</li>

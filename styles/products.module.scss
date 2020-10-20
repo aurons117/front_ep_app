@@ -56,3 +56,68 @@
     max-width: 100%;
   }
 }
+
+.article {
+  margin-top: 2rem;
+  // padding: 1rem 1.5rem 1rem 1.5rem;
+
+  h1 {
+    background: linear-gradient(90deg, #00e6dc, #00ffb9);
+    color: black;
+    text-align: center;
+    padding: 1rem 0.2rem 1rem 0.2rem;
+  }
+
+  h2,
+  p {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+  }
+}
+
+.downloads {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+
+  button {
+    width: 7rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    border: 1px solid $interactive_default;
+    color: $interactive_default;
+    outline: none;
+
+    &:hover {
+      border: 1px solid $interactive_hover;
+      color: $interactive_hover;
+      background-color: $deep_blue_80;
+    }
+
+    &:active {
+      border: 1px solid $interactive_pressed;
+      color: $interactive_pressed;
+    }
+  }
+}
+
+.description,
+.specs {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+}
+
+.specs {
+  ul {
+    padding: 0px;
+  }
+
+  li {
+    list-style-type: none;
+    color: $bold-blue;
+  }
+}
