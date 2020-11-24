@@ -43,7 +43,7 @@ export default function Products({ data }) {
                             <h3>Descripción</h3>
                             <p>{product.description}</p>
                             <img src={`${product.product_image[0].url}`} alt="Imagen del producto" className={styles.product_images} />
-                            
+
                             <h3>Características técnicas</h3>
 
                             <div>
