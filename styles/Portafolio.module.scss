@@ -38,6 +38,25 @@
         width: 100%;
         height: 50%;
         // background-color: yellow;
+
+        display: flex;
+        justify-content: flex-end;
+
+        span {
+            padding: 1rem;
+            margin-top: 0.5rem;
+            margin-right: 1.5rem;
+            background-color: $deep_blue;
+            height: fit-content;
+            cursor: pointer;
+            color: $interactive_default;
+            border: 1px solid $interactive_default;
+
+            &:hover {
+                color: $interactive_hover;
+                border: 1px solid $interactive_hover;
+            }
+        }
     }
 
     .aside_image {
@@ -59,9 +78,9 @@
 
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
 
     padding: 2rem 2rem 0rem 2rem;
 
@@ -103,7 +122,6 @@
 @media (max-width: $phone_breakpoint) {
 }
 
-
 // Checkbox
 
 .b_contain *,
@@ -136,8 +154,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 1.0rem;
-    width: 1.0rem;
+    height: 1rem;
+    width: 1rem;
     background: transparent;
     transition: background 250ms;
     border: 2px solid $bold-blue;

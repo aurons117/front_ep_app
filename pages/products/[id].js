@@ -7,6 +7,12 @@ import styles from '../../styles/products.module.scss';
 import Product_image from "../../components/product_image";
 
 export default function Products() {
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.back();
+  };
+
   return (
     <>
       <Head>
@@ -15,8 +21,8 @@ export default function Products() {
       </Head>
 
       <div className={styles.display}>
+        <span onClick={handleBack}>Regresar</span>
         <header className={styles.header}>
-          <div>Regresar</div>
           <h1>Especificaciones de producto</h1>
           <div className={styles.product_image}>
             <Product_image />

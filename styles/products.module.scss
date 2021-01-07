@@ -5,6 +5,22 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  & > span {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
+    width: fit-content;
+    padding: 0.5rem;
+    color: $interactive_default;
+    border: 1px solid $interactive_default;
+    cursor: pointer;
+
+    &:hover {
+      color: $interactive_hover;
+      border: 1px solid $interactive_hover;
+    }
+  }
 }
 
 .header {

@@ -3,8 +3,16 @@ import axios from 'axios';
 import Head from 'next/head';
 import styles from '../styles/Portafolio.module.scss';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function Home({ categories }) {
+  console.log(categories);
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.back();
+  };
+
   return (
     <>
       <Head>
@@ -68,16 +76,15 @@ export default function Home() {
           </div>
 
           <div className={styles.aside}>
-            <div className={styles.aside_free}></div>
+            <div className={styles.aside_free}>
+              <span onClick={handleBack}>Regresar</span>
+            </div>
             <div className={styles.aside_image}>
               <img src="/safety.png" alt="Img de producto" />
             </div>
           </div>
 
         </div>
-
-
-
 
       </div>
 
@@ -105,21 +112,22 @@ export default function Home() {
 // }
 
 // This gets called on every request
-// export async function getServerSideProps() {
-//   const { data } = await axios.get(`http://13.58.149.30:1337/categories/`);
+// Solo durante el desarrollo y carga de base de datos por parte de los ingenieros de producto
+export async function getServerSideProps() {
+  const { data } = await axios.get(`http://localhost:1337/categories/`);
 
-//   const categories = data.map(category => {
-//     return {
-//       name: category.name,
-//       id: category.category_id,
-//       category_image: category.category_image,
-//       subcategories: category.subcategories,
-//     };
-//   });
+  const categories = data.map(category => {
+    return {
+      name: category.name,
+      id: category.category_id,
+      category_image: category.category_image,
+      subcategories: category.subcategories,
+    };
+  });
 
-//   return {
-//     props: {
-//       categories
-//     }
-//   }
-// }
+  return {
+    props: {
+      categories
+    }
+  }
+}
