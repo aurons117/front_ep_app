@@ -34,7 +34,12 @@ export default function Home() {
 
 
           <main className={styles.main}>
-            <h1>EP-HUB <span>Mx</span></h1>
+            <div className={`${styles.content_container} animate__animated animate__fadeIn`}>
+              <h1>EP-HUB <span>Mx</span></h1>
+              <Link href="/portafolio">
+                <h2>Entrar</h2>
+              </Link>
+            </div>
           </main>
 
 
@@ -50,20 +55,17 @@ export default function Home() {
               <span />
               <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank">
                 Distribuidores
-            </a>
+              </a>
               <span />
               <a href="mailto:electricalproducts.mx@siemens.com">
-                <MailLogo /> &nbsp;
+                <MailLogo />
                 electricalproducts.mx@siemens.com
-            </a>
+              </a>
             </div>
             <p>Todos los derechos reservados. Siemens México 2020</p>
           </footer>
 
         </div>
-
-
-
       </div>
 
     </>

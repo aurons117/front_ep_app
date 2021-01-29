@@ -1,7 +1,7 @@
 @import "./colors-sizes";
 
 @font-face {
-  font-family: 'siemens sans';
+  font-family: "siemens sans";
   src: local("../fonts/SiemensSans_Prof_Roman.ttf");
   font-weight: 400;
   // [font-style: <estilo>];
@@ -14,7 +14,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: $deep_blue;
   font-size: 14px;
-  font-family: 'siemens sans';
+  font-family: "siemens sans";
   width: 100vw;
   min-height: 100vh;
   color: white;
@@ -32,4 +32,36 @@ a {
 
 button {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  height: 1rem;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark_gray;
+  border-radius: 89px;
+}
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #ffffff;
+// }
+// ::-webkit-scrollbar-thumb:active {
+//   background: #000000;
+// }
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  // border: 2px solid #a6d322;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: darken($color: $dark_gray, $amount: 20);
+}
+::-webkit-scrollbar-track:active {
+  background: darken($color: $dark_gray, $amount: 20);
 }

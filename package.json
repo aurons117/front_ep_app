@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
+    "animate.css": "^4.1.1",
     "axios": "^0.20.0",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "dotenv": "^8.2.0",

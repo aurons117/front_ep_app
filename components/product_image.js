@@ -2,7 +2,8 @@ import React from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import styles from '../styles/products.module.scss';
 
-export default function Product_image() {
+export default function Product_image({ url }) {
+
     return (
         <TransformWrapper
             defaultScale={1}
@@ -16,7 +17,7 @@ export default function Product_image() {
                         <button onClick={zoomOut}>-</button>
                     </div>
                     <TransformComponent>
-                        <img src="/safety.png" alt="test" />
+                        <img src={url} alt="Imagen de producto" />
                     </TransformComponent>
                 </React.Fragment>
             )}

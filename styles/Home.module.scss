@@ -13,7 +13,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  
+
   background-color: rgba($color: $deep_blue, $alpha: 0.7);
 }
 
@@ -33,24 +33,62 @@
 
   img {
     max-height: 1.5rem;
+    cursor: pointer;
+  }
+
+  a:hover {
+    color: $bold-blue;
+    // font-weight: bold;
   }
 }
 
 .main {
   height: 100%;
   display: flex;
+  flex-direction: column;
 
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: 1.5rem;
 
   h1 {
     border-left: 0.4rem solid $bold-blue;
     padding-left: 1rem;
+    margin: 0;
   }
 
   span {
     color: $bold-blue;
+  }
+}
+
+.content_container {
+  background-color: $deep_blue;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  h2 {
+    padding: 1rem;
+    width: fit-content;
+    background-color: $deep_blue;
+    height: fit-content;
+    cursor: pointer;
+    color: $interactive_default;
+    border: 1px solid $interactive_default;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+
+    &:hover {
+      color: $interactive_hover;
+      border: 1px solid $interactive_hover;
+      background-color: $deep_blue_80;
+    }
+
+    &:active {
+      border: 1px solid $interactive_pressed;
+      color: $interactive_pressed;
+    }
   }
 }
 
@@ -88,11 +126,64 @@
     cursor: pointer;
   }
 
+  a:hover > * {
+    fill: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+
   svg {
     width: 1.3rem;
     fill: $bold-blue;
   }
 }
 
-@media (max-width: $phone_breakpoint) {
+@media only screen and (min-width: $phone_breakpoint) {
+  .nav {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+    img {
+      max-height: 2rem;
+    }
+  }
+
+  .main {
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 4rem;
+
+    font-size: 4rem;
+  }
+
+  .content_container {
+    padding: 4rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+
+    div {
+      width: min-content;
+      margin-left: 3rem;
+      * {
+        margin-right: 0.5rem;
+      }
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin-right: 5rem;
+      font-size: 1.2rem;
+    }
+  }
 }
