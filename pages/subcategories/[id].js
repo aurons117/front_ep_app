@@ -79,11 +79,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     // Se obtienen todos los productos, se filtra el que coincide con el param enviado
-<<<<<<< HEAD
-    const subcategories = await axios.get(`http://localhost:1337/subcategories/`);
-=======
     const subcategories = await axios.get(`${environmentURL}/subcategories`);
->>>>>>> 6962892c89610011a1ccfb92660cf3733acd1be9
     const data = subcategories.data.filter(subcategory => {
         return params.id === subcategory.subcategory_id;
     });

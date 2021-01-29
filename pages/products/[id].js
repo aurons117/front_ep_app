@@ -21,56 +21,6 @@ export default function Products({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-<<<<<<< HEAD
-    useEffect(() => {
-        setProduct({
-            ...data,
-            loading: false
-        });
-    }, []);
-
-    const handleBack = () => {
-        router.back();
-    };
-
-    return (
-        <>
-            <Head>
-                <title>{`Siemens EP - ${product.name}`}</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <Navbar />
-
-            <div className={styles.container}>
-                {
-                    product.loading ? <h1>Loading</h1> :
-                        <main className={styles.main}>
-                            <header className={styles.header}>
-                                <h1>Portafolio de productos EP</h1>
-                                <h2>Producto - {data.name}</h2>
-                            </header>
-                            <h3>Descripción</h3>
-                            <p>{product.description}</p>
-                            <img src={`${product.product_image[0].url}`} alt="Imagen del producto" className={styles.product_images} />
-
-                            <h3>Características técnicas</h3>
-
-                            <div>
-                                {
-                                    product.attribute.map(atributo =>
-                                        <div key={atributo.id}>
-                                            <p>{atributo.attribute} - {atributo.value}</p>
-                                        </div>
-                                    )
-                                }
-                            </div>
-                        </main>
-                }
-                <footer className={styles.footer}>
-                    <p>Footer</p>
-                </footer>
-=======
       <div className={styles.display}>
         <div className={styles.header_product}>
           <Link href="/">
@@ -84,7 +34,6 @@ export default function Products({ data }) {
             <h1>Especificaciones de producto</h1>
             <div className={`${styles.product_image} animate__animated animate__fadeIn`}>
               <Product_image url={data.product_image[0].url} />
->>>>>>> 6962892c89610011a1ccfb92660cf3733acd1be9
             </div>
           </header>
 
@@ -148,11 +97,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     // Se obtienen todos los productos, se filtra el que coincide con el param enviado
-<<<<<<< HEAD
-    const products = await axios.get(`http://localhost:1337/products/`);
-=======
     const products = await axios.get(`${environmentURL}/products/`);
->>>>>>> 6962892c89610011a1ccfb92660cf3733acd1be9
     const data = products.data.filter(product => {
         return params.id === product.product_id;
     });
