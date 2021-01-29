@@ -92,26 +92,6 @@ export default function Home() {
 // }
 
 // This gets called on every request
-<<<<<<< HEAD
-export async function getServerSideProps() {
-  const { data } = await axios.get(`http://localhost:1337/categories/`);
-
-  const categories = data.map(category => {
-    return {
-      name: category.name,
-      id: category.category_id,
-      category_image: category.category_image,
-      subcategories: category.subcategories,
-    };
-  });
-
-  return {
-    props: {
-      categories
-    }
-  }
-}
-=======
 // export async function getServerSideProps() {
 //   const { data } = await axios.get(`http://13.58.149.30:1337/categories/`);
 
@@ -130,4 +110,3 @@ export async function getServerSideProps() {
 //     }
 //   }
 // }
->>>>>>> 6962892c89610011a1ccfb92660cf3733acd1be9
