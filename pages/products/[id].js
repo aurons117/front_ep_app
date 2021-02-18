@@ -9,7 +9,6 @@ import environmentURL from "../../data/environment";
 
 export default function Products({ data }) {
   const router = useRouter();
-  console.log(data);
 
   const handleBack = () => {
     router.back();
