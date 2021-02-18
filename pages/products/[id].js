@@ -9,6 +9,7 @@ import environmentURL from "../../data/environment";
 
 export default function Products({ data }) {
   const router = useRouter();
+  console.log(data);
 
   const handleBack = () => {
     router.back();
@@ -42,9 +43,11 @@ export default function Products({ data }) {
               <h1>{data.name}</h1>
 
               <section className={styles.downloads}>
-                <button>Info</button>
-                <button>Descargas</button>
-                <button>FAQ</button>
+                {/* <button>Info</button> */}
+                <a href={data.link_catalogo} target="_blank">
+                  <button>Catálogo</button>
+                </a>
+                {/* <button>FAQ</button> */}
               </section>
 
               <section className={styles.description}>
@@ -67,8 +70,8 @@ export default function Products({ data }) {
 
               <section className={styles.content_distributors}>
                 <p>
-                  Adquiere tus productos con nuestros
-                  <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank"> distribuidores oficiales Siemens.</a>
+                  Adquiere tus productos con nuestros distribuidores oficiales Siemens.
+                  <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank"> Click Aquí.</a>
                 </p>
               </section>
 
@@ -84,29 +87,29 @@ export default function Products({ data }) {
 
 // This function gets called at build time
 export async function getStaticPaths() {
-    // Call an external API endpoint to get posts
-    const { data } = await axios.get(`${environmentURL}/products`);
+  // Call an external API endpoint to get posts
+  const { data } = await axios.get(`${environmentURL}/products`);
 
-    // Get the paths we want to pre-render based on posts
-    const paths = data.map(product => `/products/${product.product_id}`);
+  // Get the paths we want to pre-render based on posts
+  const paths = data.map(product => `/products/${product.product_id}`);
 
-    // We'll pre-render only these paths at build time.
-    // { fallback: false } means other routes should 404.
-    return { paths, fallback: false }
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-    // Se obtienen todos los productos, se filtra el que coincide con el param enviado
-    const products = await axios.get(`${environmentURL}/products/`);
-    const data = products.data.filter(product => {
-        return params.id === product.product_id;
-    });
+  // Se obtienen todos los productos, se filtra el que coincide con el param enviado
+  const products = await axios.get(`${environmentURL}/products/`);
+  const data = products.data.filter(product => {
+    return params.id === product.product_id;
+  });
 
-    return {
-        props: {
-            data: data[0]
-        }
+  return {
+    props: {
+      data: data[0]
     }
+  }
 }
 
 // This gets called on every request

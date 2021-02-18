@@ -184,7 +184,7 @@
 
 .att {
   // font-style: italic;
-  // color: $bold-blue;
+  color: $bold-blue;
   font-weight: bolder;
 }
 
@@ -245,10 +245,14 @@
 
   .content_distributors {
     a {
-      color: white;
+      color: $interactive_default;
 
       &:hover {
         color: $interactive_hover;
+      }
+
+      &:active {
+        color: $interactive_pressed;
       }
     }
   }

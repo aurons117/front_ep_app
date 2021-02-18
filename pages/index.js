@@ -26,7 +26,10 @@ export default function Home() {
               <Link href="/portafolio">
                 <a>Portafolio</a>
               </Link>
-              <Link href="/contacto">
+              <Link href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html">
+                <a>Distribuidores</a>
+              </Link>
+              <Link href="mailto:electricalproducts.mx@siemens.com">
                 <a>Contacto</a>
               </Link>
             </div>
@@ -53,16 +56,16 @@ export default function Home() {
                 <WebLogo />
               </a>
               <span />
-              <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank">
+              {/* <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank">
                 Distribuidores
               </a>
-              <span />
+              <span /> */}
               <a href="mailto:electricalproducts.mx@siemens.com">
                 <MailLogo />
                 electricalproducts.mx@siemens.com
               </a>
             </div>
-            <p>Todos los derechos reservados. Siemens México 2020</p>
+            <p>Todos los derechos reservados © Siemens México</p>
           </footer>
 
         </div>

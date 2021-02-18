@@ -13,6 +13,17 @@ export default function Home({ categories }) {
     router.back();
   };
 
+  const order_objects = (a, b) => {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  };
+
   return (
     <>
       <Head>
@@ -41,7 +52,7 @@ export default function Home({ categories }) {
                   return (
                     <section key={id} className={styles.categories_section}>
                       <h1>{category.name}</h1>
-                      {category.subcategories.map((subcategory, id) => {
+                      {category.subcategories.sort(order_objects).map((subcategory, id) => {
                         return (
                           <Link href='/subcategories/[id]' as={`/subcategories/${subcategory.subcategory_id}`} key={id} >
                             <a className='animate__animated animate__fadeIn'>{subcategory.name}</a>
