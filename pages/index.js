@@ -26,7 +26,7 @@ export default function Home() {
               <Link href="/portafolio">
                 <a>Portafolio</a>
               </Link>
-              <Link href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html">
+              <Link href="https://new.siemens.com/mx/es/soluciones/distribuidores/distribuidores0.html">
                 <a>Distribuidores</a>
               </Link>
               <Link href="mailto:electricalproducts.mx@siemens.com">

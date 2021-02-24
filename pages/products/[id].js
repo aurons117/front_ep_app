@@ -70,7 +70,7 @@ export default function Products({ data }) {
               <section className={styles.content_distributors}>
                 <p>
                   Adquiere tus productos con nuestros distribuidores oficiales Siemens.
-                  <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank"> Click Aquí.</a>
+                  <a href="https://new.siemens.com/mx/es/soluciones/distribuidores/distribuidores0.html" target="_blank"> Click Aquí.</a>
                 </p>
               </section>
 
