@@ -23,9 +23,6 @@ export default function Home() {
               <img src="/logo.png" alt="Logo Siemens" />
             </Link>
             <div>
-              <Link href="/portafolio">
-                <a>Portafolio</a>
-              </Link>
               <Link href="https://new.siemens.com/mx/es/soluciones/distribuidores/distribuidores0.html">
                 <a>Distribuidores</a>
               </Link>

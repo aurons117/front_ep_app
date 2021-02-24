@@ -1,12 +1,12 @@
 @import "./colors-sizes";
 
 .home_container {
-  height: 100vh;
+  min-height: 100vh;
+  // min-width: 100vw;
   background-image: url("../public/home_img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  // position: relative;
 }
 
 .home_overlay {
@@ -27,12 +27,12 @@
 
   div {
     * {
-      margin-left: 1.5rem;
+      margin-left: 1rem;
     }
   }
 
   img {
-    max-height: 1.5rem;
+    max-height: 1rem;
     cursor: pointer;
   }
 
