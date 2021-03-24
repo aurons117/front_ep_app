@@ -51,7 +51,9 @@ export default function Subcategories({ data }) {
 										return (
 											<div className={`${styles.subcategories_subcategory} animate__animated animate__fadeIn`} key={id} >
 												<h2>{product.name}</h2>
-												<img src={product.product_image[0].url} alt={`Imagen de ${product.name}`} title={product.description} />
+												<div alt={`Imagen de ${product.name}`} title={product.description}>
+													<img src={product.product_image[0].url} />
+												</div>
 												<Link href='/products/[id]' as={`/products/${product.product_id}`}>
 													<a>Ver detalle</a>
 												</Link>

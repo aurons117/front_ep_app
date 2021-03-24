@@ -23,12 +23,8 @@ export default function Home() {
               <img src="/logo.png" alt="Logo Siemens" />
             </Link>
             <div>
-              <Link href="https://new.siemens.com/mx/es/soluciones/distribuidores/distribuidores0.html">
-                <a>Distribuidores</a>
-              </Link>
-              <Link href="mailto:electricalproducts.mx@siemens.com">
-                <a>Contacto</a>
-              </Link>
+              <a href="https://new.siemens.com/mx/es/soluciones/distribuidores/distribuidores0.html" target="_blank">Distribuidores</a>
+              <a href="mailto:electricalproducts.mx@siemens.com?subject=EP-Hub-Lite mail">Contacto</a>
             </div>
           </nav>
 
@@ -57,7 +53,7 @@ export default function Home() {
                 Distribuidores
               </a>
               <span /> */}
-              <a href="mailto:electricalproducts.mx@siemens.com">
+              <a href="mailto:electricalproducts.mx@siemens.com?subject=EP-Hub-Lite mail">
                 <MailLogo />
                 electricalproducts.mx@siemens.com
               </a>
