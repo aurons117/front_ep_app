@@ -49,10 +49,6 @@ export default function Home() {
                 <WebLogo />
               </a>
               <span />
-              {/* <a href="https://new.siemens.com/mx/es/productos/automatizacion/oficinas-ventas.html" target="_blank">
-                Distribuidores
-              </a>
-              <span /> */}
               <a href="mailto:electricalproducts.mx@siemens.com?subject=EP-Hub-Lite mail">
                 <MailLogo />
                 electricalproducts.mx@siemens.com
